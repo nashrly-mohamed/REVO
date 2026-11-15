@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REVO - ريفو</title>
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Arial,Tahoma,sans-serif;
+background:#101820;
+color:white;
+}
+header{
+padding:22px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#17232d;
+}
+.logo{font-size:29px;font-weight:bold;color:#19d6c1}
+.logo span{color:white}
+.login{
+background:transparent;
+border:1px solid #19d6c1;
+color:#19d6c1;
+padding:10px 17px;
+border-radius:20px;
+}
+.hero{
+padding:35px 22px;
+text-align:center;
+}
+.hero h1{font-size:32px;margin-bottom:10px}
+.hero h1 span{color:#19d6c1}
+.hero p{color:#bdc8d0;line-height:1.8}
+.car{
+font-size:85px;
+margin:20px;
+}
+.booking{
+background:#1b2934;
+margin:15px;
+padding:22px;
+border-radius:18px;
+}
+.booking h2{margin-top:0}
+.field{
+background:#101820;
+padding:15px;
+border-radius:10px;
+margin:13px 0;
+}
+.field label{
+display:block;
+color:#19d6c1;
+margin-bottom:9px;
+font-size:14px;
+}
+.field input{
+width:100%;
+background:transparent;
+border:0;
+outline:none;
+color:white;
+font-size:16px;
+}
+.field input::placeholder{color:#aab5bd}
+select{
+width:100%;
+background:#101820;
+color:white;
+padding:15px;
+border:0;
+border-radius:10px;
+margin:10px 0;
+}
+.request{
+width:100%;
+background:#19d6c1;
+color:#101820;
+padding:16px;
+border:0;
+border-radius:12px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+margin-top:15px;
+}
+.features{
+padding:20px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
+.feature{
+background:#1b2934;
+padding:20px;
+border-radius:13px;
+text-align:center;
+}
+.feature b{color:#19d6c1}
+footer{
+text-align:center;
+padding:25px;
+color:#aab5bd;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">REVO <span>ريفو</span></div>
+<button class="login" onclick="alert('قريباً: تسجيل الدخول')">دخول</button>
+</header>
+
+<section class="hero">
+<h1>مشوارك علينا.. <span>ريفو معاك</span></h1>
+<p>اطلب عربيتك بسهولة وأمان<br>مشوارك يبدأ بضغطة زر</p>
+<div class="car">🚘</div>
+</section>
+
+<section class="booking">
+<h2>اطلب مشوارك الآن</h2>
+
+<div class="field">
+<label>📍 مكان الانطلاق</label>
+<input id="from" placeholder="اكتب مكانك الحالي">
+</div>
+
+<div class="field">
+<label>🏁 الوجهة</label>
+<input id="to" placeholder="رايح فين؟">
+</div>
+
+<label>نوع السيارة</label>
+<select id="carType">
+<option>سيارة عادية</option>
+<option>سيارة مريحة</option>
+</select>
+
+<button class="request" onclick="bookRide()">اطلب سيارة الآن</button>
+<p id="result" style="text-align:center;color:#19d6c1"></p>
+</section>
+
+<section class="features">
+<div class="feature">🚗<br><b>سهولة الحجز</b><br>اطلب مشوارك بسهولة</div>
+<div class="feature">🛡️<br><b>راحة وأمان</b><br>رحلة مريحة</div>
+<div class="feature">📍<br><b>موقعك</b><br>حدد وجهتك</div>
+<div class="feature">⚡<br><b>سرعة</b><br>وفر وقتك</div>
+</section>
+
+<footer>
+REVO - ريفو<br>
+خدمتك في حدائق الأهرام والهرم وفيصل
+</footer>
+
+<script>
+function bookRide(){
+let from=document.getElementById('from').value.trim();
+let to=document.getElementById('to').value.trim();
+
+if(!from || !to){
+alert('من فضلك اكتب مكان الانطلاق والوجهة');
+return;
+}
+
+document.getElementById('result').innerText=
+'تم تجهيز بيانات رحلتك التجريبية من '+from+' إلى '+to+' — نظام الحجز الفعلي قريباً.';
+}
+</script>
+
+</body>
+</html>
