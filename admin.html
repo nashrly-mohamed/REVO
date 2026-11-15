@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>REVO ADMIN</title>
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+background:#101820;
+color:white;
+font-family:Arial,Tahoma,sans-serif;
+}
+header{
+background:#1b2934;
+padding:22px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.logo{font-size:27px;font-weight:bold;color:#19d6c1}
+.logo span{color:white}
+.admin{color:#aab5bd;font-size:13px}
+.container{padding:20px;max-width:1100px;margin:auto}
+h2{color:#19d6c1}
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+}
+.card{
+background:#1b2934;
+padding:20px;
+border-radius:14px;
+text-align:center;
+}
+.number{font-size:28px;color:#19d6c1;font-weight:bold}
+.card p{color:#aab5bd;margin-bottom:0}
+.section{
+background:#1b2934;
+padding:20px;
+border-radius:14px;
+margin-top:20px;
+}
+table{width:100%;border-collapse:collapse}
+td,th{
+padding:13px 8px;
+border-bottom:1px solid #344653;
+text-align:right;
+}
+th{color:#19d6c1}
+.empty{text-align:center;color:#aab5bd;padding:25px}
+button{
+padding:10px 15px;
+border:0;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+}
+.approve{background:#19d6c1;color:#101820}
+.reject{background:#e75b68;color:white}
+.note{color:#aab5bd;line-height:1.8;font-size:14px}
+@media(max-width:600px){
+.cards{grid-template-columns:1fr}
+.section{overflow-x:auto}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">REVO <span>ADMIN</span></div>
+<div class="admin">لوحة تحكم الإدارة</div>
+</header>
+
+<div class="container">
+<h2>أهلاً بك في إدارة ريفو 👋</h2>
+<p class="note">من هنا هتتابع نشاط التطبيق وتراجع طلبات السائقين.</p>
+
+<div class="cards">
+<div class="card">
+<div class="number">0</div>
+<p>إجمالي السائقين</p>
+</div>
+<div class="card">
+<div class="number">0</div>
+<p>طلبات المراجعة</p>
+</div>
+<div class="card">
+<div class="number">0</div>
+<p>الرحلات</p>
+</div>
+</div>
+
+<div class="section">
+<h2>طلبات تسجيل السائقين</h2>
+<table>
+<thead>
+<tr>
+<th>اسم السائق</th>
+<th>رقم الهاتف</th>
+<th>السيارة</th>
+<th>الحالة</th>
+<th>الإجراء</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="5" class="empty">
+لا توجد طلبات حتى الآن
+</td>
+</tr>
+</tbody>
+</table>
+<p class="note">
+ستظهر طلبات السائقين هنا بعد ربط التسجيل بقاعدة البيانات.
+</p>
+</div>
+
+<div class="section">
+<h2>إدارة الرحلات</h2>
+<p class="empty">لا توجد رحلات مسجلة حتى الآن.</p>
+</div>
+
+</div>
+</body>
+</html>
