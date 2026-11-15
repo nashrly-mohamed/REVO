@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تسجيل السائقين - REVO</title>
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+background:#101820;
+color:white;
+font-family:Arial,Tahoma,sans-serif;
+padding:20px;
+}
+.container{
+max-width:480px;
+margin:25px auto;
+background:#1b2934;
+padding:25px;
+border-radius:20px;
+}
+.logo{
+text-align:center;
+font-size:32px;
+font-weight:bold;
+color:#19d6c1;
+}
+.logo span{color:white}
+h2{text-align:center}
+p{text-align:center;color:#aab5bd;line-height:1.7}
+label{
+display:block;
+margin:15px 0 7px;
+color:#19d6c1;
+}
+input,select{
+width:100%;
+padding:14px;
+border:1px solid #344653;
+border-radius:10px;
+background:#101820;
+color:white;
+font-size:16px;
+}
+button{
+width:100%;
+padding:15px;
+margin-top:22px;
+background:#19d6c1;
+border:0;
+border-radius:10px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+#message{
+color:#19d6c1;
+text-align:center;
+line-height:1.8;
+}
+a{color:#19d6c1}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="logo">REVO <span>ريفو</span></div>
+<h2>انضم كسائق في ريفو</h2>
+<p>سجل بياناتك وابدأ رحلتك مع REVO</p>
+
+<form id="driverForm">
+
+<label>اسم السائق بالكامل</label>
+<input type="text" id="name" placeholder="اكتب اسمك" required>
+
+<label>رقم الموبايل</label>
+<input type="tel" id="phone" placeholder="01xxxxxxxxx" required>
+
+<label>المنطقة</label>
+<select id="area" required>
+<option value="">اختار منطقة عملك</option>
+<option>حدائق الأهرام</option>
+<option>الهرم</option>
+<option>فيصل</option>
+</select>
+
+<label>نوع السيارة</label>
+<input type="text" id="car" placeholder="مثال: شيفروليه أفيو" required>
+
+<label>موديل السيارة</label>
+<input type="number" id="year" placeholder="مثال: 2018" required>
+
+<label>لون السيارة</label>
+<input type="text" id="color" placeholder="لون السيارة" required>
+
+<label>رقم لوحة السيارة</label>
+<input type="text" id="plate" placeholder="اكتب رقم اللوحة" required>
+
+<label>رقم رخصة القيادة</label>
+<input type="text" id="license" placeholder="رقم الرخصة" required>
+
+<label>صورة السيارة</label>
+<input type="file" id="carPhoto" accept="image/*" required>
+
+<button type="submit">تسجيل كسائق</button>
+</form>
+
+<p id="message"></p>
+<p><a href="index.html">العودة للصفحة الرئيسية</a></p>
+</div>
+
+<script>
+document.getElementById('driverForm').addEventListener('submit',function(e){
+e.preventDefault();
+document.getElementById('message').innerText=
+'تم إدخال بياناتك بنجاح تجريبياً. سيتم تفعيل التسجيل الحقيقي قريباً.';
+});
+</script>
+</body>
+</html>
